@@ -19,19 +19,23 @@ const assistant = new AssistantV2({
 // Route to handle session tokens
 // GET /api/watson/session
 router.get("/session", async (req, res) => {
+  // if success
   try {
     const session = await assistant.createSession({
       assistantId: process.env.WATSON_ASSISTANT_ID,
     });
     res.json(session["result"]);
-  } catch (e) {
+
+    // if fail
+  } catch (err) {
     res.send("Error processing your request");
-    console.log(e);
+    console.log(err);
   }
 });
+
 // Handle messages
 // POST /api/watson/message
-router.post("/message", async (requ, res) => {
+router.post("/message", async (req, res) => {
   // Construct payload
   payload = {
     assistantId: process.env.WATSON_ASSISTANT_ID,
@@ -41,11 +45,15 @@ router.post("/message", async (requ, res) => {
       text: req.body.input,
     },
   };
+  // if successful
   try {
     const message = await assistant.message(payload);
     res.json(message("result"));
-  } catch (e) {
+
+    // if fail
+  } catch (err) {
     res.send("Error processing request");
+    console.log(err);
   }
 });
 
