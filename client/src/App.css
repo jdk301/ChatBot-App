@@ -1,9 +1,9 @@
-/* .container{
+.container {
   text-align: center;
 }
-input{
+input {
   border: 0;
-  border-bottom: 1px solid black;   
+  border-bottom: 1px solid black;
   height: 20px;
   width: 400px;
   outline: none;
@@ -11,38 +11,55 @@ input{
   font-size: 20px;
   margin-top: 20px;
 }
-.bot{
+::-webkit-input-placeholder {
+  color: #90a4ae;
+  opacity: 60%;
+}
+.bot {
   background-color: rgb(152, 85, 212);
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: left;
   margin-top: 10px;
-  padding: 4px;
-  padding-left: 20px;
-  max-width: 300px;
+  margin-left: 5px;
+  padding: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: fit-content;
+  max-width: 200px;
 }
-.user{
-  background-color: rgb(0, 180, 160);
+.user {
+  background-color: #39a8e5;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border-radius: 10px; 
+  border-radius: 15px;
   text-align: right;
   margin-top: 10px;
-  padding: 4px;
-  padding-right: 20px;
-  max-width: 300px;
+  padding: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: fit-content;
+  max-width: 200px;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: 5px;
 }
-.chat{
+.chat {
   display: inline-block;
-  max-width: 400px;
+  width: 400px;
 }
-.historyContainer{
-  height:600px;
-  overflow: scroll;
+.historyContainer {
+  background-color: #eceff1;
+  margin: 0;
+  -moz-box-shadow: 0 0 5px black;
+  -webkit-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  height: 60vh;
+  width: 400px;
+  overflow-y: auto;
 }
-h1{
+h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-} */
+  margin: 10px;
+  text-align: center;
+}

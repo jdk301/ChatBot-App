@@ -1,4 +1,3 @@
-// Import types
 import {
   INPUT_SUCCESS,
   INPUT_FAIL,
@@ -8,12 +7,13 @@ import {
   MESSAGE_FAIL,
 } from "../actions/types";
 
-// Initial state
+// initial state
 const initialState = {
   messages: [],
 };
 
-// Switch statement - update state
+// switch statement - update state
+// eslint-disable-next-line
 export default (state = initialState, action) => {
   const { type, payload } = action;
   let { messages } = state;
